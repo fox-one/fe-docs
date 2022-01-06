@@ -2704,20 +2704,20 @@ __metadata:
   linkType: hard
 
 "@foxone/uikit@npm:beta":
-  version: 3.0.1-53
-  resolution: "@foxone/uikit@npm:3.0.1-53"
+  version: 3.0.1-54
+  resolution: "@foxone/uikit@npm:3.0.1-54"
   dependencies:
+    "@foxone/utils": ^0.2.6
     qrcode: ^1.5.0
     tinycolor2: ^1.4.2
   peerDependencies:
     "@foxone/icons": ^3.0.0
-    "@foxone/utils": ^0.2.6
     typescript: ^4.0.0
     vue: ^2.6.12
     vue-class-component: ^7.2.3
     vue-property-decorator: ^9.1.2
     vuetify: ^2.4.5
-  checksum: 0959fa640165aa476401a9d1bd371491ba218f05b619a68163567fe2e5b99da5a93455a43294c1af5aae63eb715d06c57d42402c07e87189e63bdfcf17a29cd9
+  checksum: 896a142289b5e21601fe0c06a8877929ed1d751ff78b2a6b2d2208d0f2100fb4ec52f4f319c357cc3012253bfc1ea12c77c4bec5a413ae07b988a0331221f109
   languageName: node
   linkType: hard
 
@@ -2727,7 +2727,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@foxone/utils@npm:^0.2.21":
+"@foxone/utils@npm:^0.2.21, @foxone/utils@npm:^0.2.6":
   version: 0.2.21
   resolution: "@foxone/utils@npm:0.2.21"
   dependencies:

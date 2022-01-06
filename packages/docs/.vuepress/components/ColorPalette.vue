@@ -100,7 +100,7 @@ export default {
 .color-palette {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  width: 736px;
+  max-width: 736px;
   border-radius: 8px;
   overflow: hidden;
 
