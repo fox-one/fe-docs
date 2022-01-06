@@ -5,30 +5,36 @@ on:
       - main
 
 jobs:
-  master:
-    strategy:
-      matrix:
-        step: ['build:release']
-    name: ${{ matrix.step }}
-    if: "! startsWith(github.event.head_commit.message, '[CI Skip]') && github.repository == 'fox-one/fe-lib-template'"
+  docs:
+    needs: [master]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
         with:
           token: ${{ secrets.GH_PAT }}
-      
-      - name: ${{ matrix.step }}
-        env:
-          GH_PAT: ${{ secrets.GH_PAT }}
-          GH_RELEASE_GITHUB_API_TOKEN: ${{ secrets.GH_PAT }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - uses: actions/cache@v2
+        with:
+          path: |
+            node_modules
+            **/node_modules
+          key: ${{ runner.os }}-${{ hashFiles('./yarn.lock') }}
+
+      - name: Build docs
         run: |
           yarn install --immutable | grep -v 'YN0013'
-          yarn ${{ matrix.step }}
-          
+          cd packages/docs && yarn build
+
+      - name: Deploy with gh-pages
+        run: |
+          git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+          npx gh-pages --dist packages/docs/.vuepress/dist --dest . -u "github-actions-bot <support+actions@github.com>"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
   dummy:
     runs-on: ubuntu-latest
     steps:
-    - name: dummy
-      run: |
-        echo "Dummy skip step"
+      - name: dummy
+        run: |
+          echo "Dummy skip step"
