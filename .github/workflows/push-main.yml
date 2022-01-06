@@ -6,7 +6,6 @@ on:
 
 jobs:
   docs:
-    needs: [master]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
