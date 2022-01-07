@@ -2692,6 +2692,21 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@foxone/icons@npm:3.0.1-45":
+  version: 3.0.1-45
+  resolution: "@foxone/icons@npm:3.0.1-45"
+  dependencies:
+    "@foxone/uikit": 3.0.1-45
+    vue: ^2.6.12
+    vue-class-component: ^7.2.3
+    vue-property-decorator: ^9.1.2
+    vue-router: ^3.2.0
+    vuetify: ^2.5.6
+    vuex: ^3.4.0
+  checksum: 7532ad91589fe967c5c7857e4e529b287c27aed95901d80b36852e636f0eed13ef2002a04bcf29c0d8b8dc3a888c7671f5a20731e0e36a8743d5ba384d76641d
+  languageName: node
+  linkType: hard
+
 "@foxone/icons@npm:beta":
   version: 3.0.1-52
   resolution: "@foxone/icons@npm:3.0.1-52"
@@ -2700,6 +2715,43 @@ __metadata:
     vue-class-component: ^7.2.3
     vue-property-decorator: ^9.1.2
   checksum: 6a042f2dc02020fed628ecd757e293fa2cb365b1fa661132717cafcb8d1a524f83e65ba61ab34ecb97d7ab6300058014608bb5b6331edf471fdbd3287e856d7c
+  languageName: node
+  linkType: hard
+
+"@foxone/pando-ui@npm:beta":
+  version: 0.0.2-9
+  resolution: "@foxone/pando-ui@npm:0.0.2-9"
+  dependencies:
+    "@foxone/icons": 3.0.1-45
+    "@foxone/uikit": 3.0.1-45
+    core-js: ^3.6.5
+    vue: ^2.6.11
+    vue-class-component: ^7.2.3
+    vue-i18n: ^8.26.7
+    vue-property-decorator: ^9.1.2
+    vue-router: ^3.2.0
+    vuetify: ^2.5.14
+    vuetify-loader: ^1.7.3
+    vuex: ^3.4.0
+  checksum: 6f42ba80f75919b4279daff117fa526a5a4e52d8a773ba0e2520a713d102e419c4710c115e9c5b43b38e60f5426450498e557b5efb1a9c330d0360dd0d897afa
+  languageName: node
+  linkType: hard
+
+"@foxone/uikit@npm:3.0.1-45":
+  version: 3.0.1-45
+  resolution: "@foxone/uikit@npm:3.0.1-45"
+  dependencies:
+    "@foxone/icons": 3.0.1-45
+    "@foxone/utils": ^0.2.6
+    bignumber.js: ^9.0.1
+    qrcode: ^1.4.4
+    tinycolor2: ^1.4.2
+    vue-class-component: ^7.2.3
+    vue-property-decorator: ^9.1.2
+  peerDependencies:
+    vue: ^2.6.11
+    vuetify: ^2.4.5
+  checksum: b24392d615905883ca2b13c70567fe28c339998be458e71cc51fed875d8b2b36e36e67cdc65a48ea2bb5a537cbdb54cbd2ecfea57134c90aba3704589c835b25
   languageName: node
   linkType: hard
 
@@ -8843,6 +8895,7 @@ __metadata:
   resolution: "fe-docs@workspace:."
   dependencies:
     "@foxone/dev": ^0.2.17
+    "@foxone/pando-ui": beta
   languageName: unknown
   linkType: soft
 
@@ -15040,7 +15093,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"qrcode@npm:^1.5.0":
+"qrcode@npm:^1.4.4, qrcode@npm:^1.5.0":
   version: 1.5.0
   resolution: "qrcode@npm:1.5.0"
   dependencies:
@@ -18131,7 +18184,7 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"vue-class-component@npm:^7.2.6":
+"vue-class-component@npm:^7.2.3, vue-class-component@npm:^7.2.6":
   version: 7.2.6
   resolution: "vue-class-component@npm:7.2.6"
   peerDependencies:
@@ -18160,6 +18213,13 @@ resolve@^2.0.0-next.3:
   version: 2.3.4
   resolution: "vue-hot-reload-api@npm:2.3.4"
   checksum: dedefb87284bdba222a93bc55bc1441ee16d9e30546d57107c42d21102cfcafba058c8be35f2678370cee0588f1bf3ee7b32dbf3c1610e5c9bf851a5996a8351
+  languageName: node
+  linkType: hard
+
+"vue-i18n@npm:^8.26.7":
+  version: 8.26.8
+  resolution: "vue-i18n@npm:8.26.8"
+  checksum: 5a6ed779e4b2142cabee94d3c3800457adb4de24faa30fab2ac11b532ad854a6261df20293473b523eb33b131ccd0a1e3a53f40b6b4e812201c20e642fabd34e
   languageName: node
   linkType: hard
 
@@ -18201,7 +18261,7 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"vue-router@npm:^3.4.5":
+"vue-router@npm:^3.2.0, vue-router@npm:^3.4.5":
   version: 3.5.3
   resolution: "vue-router@npm:3.5.3"
   checksum: fa6c290ca43d2107f42b7d030ecb21a89baa2d18ee8dcee1aa8ba2c814d83acb02be21ba5c54915b46e21ad3a675d37d9392263a8ec3b1b1b688587992e1c824
@@ -18251,7 +18311,7 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"vue@npm:2.6.14, vue@npm:^2.6.10":
+"vue@npm:2.6.14, vue@npm:^2.6.10, vue@npm:^2.6.11, vue@npm:^2.6.12":
   version: 2.6.14
   resolution: "vue@npm:2.6.14"
   checksum: 542787dc830efc5cb8285a8046bba5a81e6f952e70e4e1a308cc8d51c68f152fd02da5edbd47b6a14908437d76fdee048aa3f64341d4777fb37ce231e2d845df
@@ -18358,7 +18418,22 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"vuetify@npm:^2.6.2":
+"vuetify-loader@npm:^1.7.3":
+  version: 1.7.3
+  resolution: "vuetify-loader@npm:1.7.3"
+  dependencies:
+    decache: ^4.6.0
+    file-loader: ^6.2.0
+    loader-utils: ^2.0.0
+  peerDependencies:
+    vue-template-compiler: ^2.6.10
+    vuetify: ^1.3.0 || ^2.0.0
+    webpack: ^4.0.0 || ^5.0.0
+  checksum: 73378a73829238d87699d9204811a50dfb2a6d9c79defd0bcd5eacad4d4d4f252bee37e0f7546311d31fa573450549b49461deb748c9a352f93bb621c3d125a0
+  languageName: node
+  linkType: hard
+
+"vuetify@npm:^2.5.14, vuetify@npm:^2.5.6, vuetify@npm:^2.6.2":
   version: 2.6.2
   resolution: "vuetify@npm:2.6.2"
   peerDependencies:
@@ -18367,7 +18442,7 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"vuex@npm:^3.6.2":
+"vuex@npm:^3.4.0, vuex@npm:^3.6.2":
   version: 3.6.2
   resolution: "vuex@npm:3.6.2"
   peerDependencies:
