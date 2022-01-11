@@ -8,16 +8,21 @@ const readdir = (dir, base) => {
 };
 
 module.exports = [
-  { title: "Usage", collapsable: false, path: "/" },
+  {
+    title: "Introduction",
+    collapsable: true,
+    sidebarDepth: 0,
+    children: ["/"]
+  },
   {
     title: "Styles",
-    collapsable: false,
+    collapsable: true,
     sidebarDepth: 0,
     children: readdir("../styles", "styles/")
   },
   {
     title: "Components",
-    collapsable: false,
+    collapsable: true,
     sidebarDepth: 0,
     children: readdir("../components", "components/")
   }

@@ -51,12 +51,12 @@ export default ({
   options.vuetify = vuetify;
 
   Vue.use(Vuetify);
-  Vue.use(PandoUI);
 
   if (typeof window !== undefined) {
     Vue.use(UIKit);
     Vue.use(UIKit.Toast, vuetify, { top: false, centered: true });
     Vue.use(UIKit.Dialog, vuetify, { flat: true });
+    Vue.use(PandoUI, vuetify);
   }
 
   Vue.use(Vuex);

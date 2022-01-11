@@ -2790,9 +2790,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@foxone/vuepress-theme-docs@npm:0.0.2-6":
-  version: 0.0.2-6
-  resolution: "@foxone/vuepress-theme-docs@npm:0.0.2-6"
+"@foxone/vuepress-theme-docs@npm:beta":
+  version: 0.0.2-7
+  resolution: "@foxone/vuepress-theme-docs@npm:0.0.2-7"
   dependencies:
     entities: 1.1.2
     markdown-it-checkbox: ^1.1.0
@@ -2814,7 +2814,7 @@ __metadata:
   peerDependencies:
     "@foxone/icons": ^3.0.0
     "@foxone/uikit": ^3.0.0
-  checksum: 82f35a96ed669edefeffb2b544087a7265e72f7247dd5ced38a5c37d3e89737db09174b838e4e3620b48d61bded5d052beada76230c8ac5f5d8a3899296a1ec6
+  checksum: 9838e637badcc78eb2d7c3f1308a458255a7d45a3fc370d967061844131bd01d6b9680510381f5d6bb790c8199ff41c292a153a6c6998aa603bd49a09e3f0a78
   languageName: node
   linkType: hard
 
@@ -7499,7 +7499,7 @@ __metadata:
     "@foxone/icons": beta
     "@foxone/uikit": beta
     "@foxone/utils": ^0.2.21
-    "@foxone/vuepress-theme-docs": 0.0.2-6
+    "@foxone/vuepress-theme-docs": beta
     entities: 1.1.2
     sass-loader: 10.1.0
     vuepress: ^1.9.5
