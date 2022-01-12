@@ -25,5 +25,11 @@ module.exports = [
     collapsable: true,
     sidebarDepth: 0,
     children: readdir("../components", "components/")
+  },
+  {
+    title: "PandoUI",
+    collapsable: true,
+    sidebarDepth: 0,
+    children: readdir("../pando-components", "pando-components/")
   }
 ];

@@ -2718,6 +2718,25 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@foxone/pando-ui@npm:0.0.2-10":
+  version: 0.0.2-10
+  resolution: "@foxone/pando-ui@npm:0.0.2-10"
+  dependencies:
+    "@foxone/icons": 3.0.1-45
+    "@foxone/uikit": 3.0.1-45
+    core-js: ^3.6.5
+    vue: ^2.6.11
+    vue-class-component: ^7.2.3
+    vue-i18n: ^8.26.7
+    vue-property-decorator: ^9.1.2
+    vue-router: ^3.2.0
+    vuetify: ^2.5.14
+    vuetify-loader: ^1.7.3
+    vuex: ^3.4.0
+  checksum: 005aab5c8029abc3c858f05ab3e40495dcf19d95faee5aa570282dc365be667cd47850012355aeb5a84d5a169d56848004c1d4885cfb7e8f97bbc6b6a6a774ff
+  languageName: node
+  linkType: hard
+
 "@foxone/pando-ui@npm:beta":
   version: 0.0.2-9
   resolution: "@foxone/pando-ui@npm:0.0.2-9"
@@ -7497,6 +7516,7 @@ __metadata:
   resolution: "docs-uikit@workspace:packages/docs"
   dependencies:
     "@foxone/icons": beta
+    "@foxone/pando-ui": 0.0.2-10
     "@foxone/uikit": beta
     "@foxone/utils": ^0.2.21
     "@foxone/vuepress-theme-docs": beta

@@ -1,7 +1,7 @@
 import Vuex from "vuex";
 import Vuetify from "vuetify/lib";
 import UIKit from "@foxone/uikit";
-import PandoUI from "@foxone/pando-ui";
+import PandoUI, { messages } from "@foxone/pando-ui";
 import * as icons from "@foxone/icons";
 import { mergeDeep } from "vuetify/lib/util/helpers";
 import locales from "@theme/locales.json";
@@ -18,7 +18,6 @@ export default ({
   // router,
   siteData
 }) => {
-  console.log("vuepress them docs enhanceApp", options);
   const vuetifyOptions = siteData.themeConfig.vuetifyOptions || {};
   const preset = mergeDeep(UIKit.preset, {
     icons: {
@@ -30,7 +29,7 @@ export default ({
         }, {})
       }
     },
-    lang: { locales },
+    lang: { locales: mergeDeep(locales, messages) },
     theme: {
       themes: {
         light: {
@@ -46,6 +45,7 @@ export default ({
       }
     }
   });
+
   const vuetify = new Vuetify(mergeDeep(preset, vuetifyOptions));
 
   options.vuetify = vuetify;

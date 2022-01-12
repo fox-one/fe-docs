@@ -1,4 +1,4 @@
-# Use UIKit
+# Usage
 
 UIKit is a UI library based on Vue and Vuetify，which provides some customized styles.
 
