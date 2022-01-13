@@ -18,7 +18,6 @@
     "test": "foxone-dev-run-test --coverage --passWithNoTests"
   },
   "dependencies": {
-    "@foxone/dev": "^0.2.17",
-    "@foxone/pando-ui": "beta"
+    "@foxone/dev": "^0.2.17"
   }
 }
