@@ -2692,14 +2692,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@foxone/icons@npm:beta":
-  version: 3.0.1-52
-  resolution: "@foxone/icons@npm:3.0.1-52"
+"@foxone/icons@npm:^3.0.1-0":
+  version: 3.0.1-53
+  resolution: "@foxone/icons@npm:3.0.1-53"
   peerDependencies:
     vue: ^2.6.12
     vue-class-component: ^7.2.3
     vue-property-decorator: ^9.1.2
-  checksum: 6a042f2dc02020fed628ecd757e293fa2cb365b1fa661132717cafcb8d1a524f83e65ba61ab34ecb97d7ab6300058014608bb5b6331edf471fdbd3287e856d7c
+  checksum: 631ad418bc17f72a08344d07b3f3854d4d1517b05f5f174ab4482e56faa363fc0e883246abed65e11c1db782537f5320440cb0348539c153c508f322410ecb96
   languageName: node
   linkType: hard
 
@@ -7457,7 +7457,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "docs-uikit@workspace:packages/docs"
   dependencies:
-    "@foxone/icons": beta
+    "@foxone/icons": ^3.0.1-0
     "@foxone/pando-ui": beta
     "@foxone/uikit": beta
     "@foxone/utils": ^0.2.21

@@ -17,14 +17,8 @@
 <script lang="ts">
 import { Component, Vue, Prop } from "vue-property-decorator";
 import meta from "@foxone/icons/src/meta.json";
+import icons from "@foxone/icons/src/icons.json";
 
-const icons = [...meta.outline, ...meta.fill].map((x) => x.componentName);
-const icons3p = icons.filter((x) => x.includes("3P"));
-const icons4p = icons.filter((x) => x.includes("4P"));
-const icons8p = icons.filter((x) => x.includes("8P"));
-const icons6p = icons.filter(
-  (x) => !icons3p.includes(x) && !icons4p.includes(x) && !icons8p.includes(x)
-);
 const iconsColorful = meta.colorful.map((x) => x.componentName);
 
 @Component({
@@ -39,20 +33,23 @@ class Icons extends Vue {
 
   mounted() {
     if (this.type === "3p") {
-      this.icons = icons3p;
+      this.icons = icons["3P"];
       this.size = 12;
     } else if (this.type === "4p") {
-      this.icons = icons4p;
+      this.icons = icons["4P"];
       this.size = 16;
     } else if (this.type === "6p") {
-      this.icons = icons6p;
+      this.icons = icons["6P"];
       this.size = 24;
-    } else if (this.type === "8p") {
-      this.icons = icons8p;
-      this.size = 32;
     } else if (this.type === "colorful") {
       this.icons = iconsColorful;
       this.size = 48;
+    } else {
+      const all = [...meta.outline, ...meta.fill].map((x) => x.componentName);
+      const used = [...icons["3P"], ...icons["4P"], ...icons["6P"]];
+
+      this.icons = all.filter((x) => used.findIndex((y) => x === y) === -1);
+      this.size = 24;
     }
   }
 }

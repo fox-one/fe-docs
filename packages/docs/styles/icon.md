@@ -26,7 +26,7 @@ The 6P icon is often used in the bottom navigation bar or history record.
 
 <br>
 
-## 8P
+## Others
 
 The 8P icon is a universal icon, which can be scaled to 6P, 4P size through the program, and the stroke remains 1.5px.
 

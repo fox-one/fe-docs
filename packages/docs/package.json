@@ -9,7 +9,7 @@
   "author": "Fox.ONE",
   "license": "ISC",
   "dependencies": {
-    "@foxone/icons": "beta",
+    "@foxone/icons": "^3.0.1-0",
     "@foxone/pando-ui": "beta",
     "@foxone/uikit": "beta",
     "@foxone/utils": "^0.2.21",
