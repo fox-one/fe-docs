@@ -11,7 +11,7 @@
   "dependencies": {
     "@foxone/icons": "^3.0.1-0",
     "@foxone/pando-ui": "beta",
-    "@foxone/uikit": "beta",
+    "@foxone/uikit": "3.1.2-2",
     "@foxone/utils": "^0.2.21",
     "@foxone/vuepress-theme-docs": "beta",
     "vuetify": "^2.6.2"
