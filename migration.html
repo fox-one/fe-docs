@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Migrate from @foxone/uikit@2.x to @foxone/uikit@3.x | Fox.ONE UIKit</title>
+    <meta name="generator" content="VuePress 1.9.5">
+    
+    <meta name="description" content="Fox.ONE UIKit is a lib base on Vuetify, which contains customized styles for Fox.ONE Apps.">
+    
+    <link rel="preload" href="/fe-docs/assets/css/0.styles.ed4339ad.css" as="style"><link rel="preload" href="/fe-docs/assets/js/app.de792d44.js" as="script"><link rel="preload" href="/fe-docs/assets/js/5.4a9d9ddc.js" as="script"><link rel="preload" href="/fe-docs/assets/js/52.044ec9cc.js" as="script"><link rel="prefetch" href="/fe-docs/assets/js/1.9f9b9309.js"><link rel="prefetch" href="/fe-docs/assets/js/10.e6cf370a.js"><link rel="prefetch" href="/fe-docs/assets/js/11.30a06e94.js"><link rel="prefetch" href="/fe-docs/assets/js/12.e34469c3.js"><link rel="prefetch" href="/fe-docs/assets/js/13.b577b005.js"><link rel="prefetch" href="/fe-docs/assets/js/14.69c262a8.js"><link rel="prefetch" href="/fe-docs/assets/js/15.04f624e0.js"><link rel="prefetch" href="/fe-docs/assets/js/16.b517dd78.js"><link rel="prefetch" href="/fe-docs/assets/js/17.aa7f914e.js"><link rel="prefetch" href="/fe-docs/assets/js/18.ddfd5d41.js"><link rel="prefetch" href="/fe-docs/assets/js/19.482353be.js"><link rel="prefetch" href="/fe-docs/assets/js/2.202221e4.js"><link rel="prefetch" href="/fe-docs/assets/js/20.17dae9c7.js"><link rel="prefetch" href="/fe-docs/assets/js/21.a7d5991f.js"><link rel="prefetch" href="/fe-docs/assets/js/22.3ce09bc0.js"><link rel="prefetch" href="/fe-docs/assets/js/23.40c40a16.js"><link rel="prefetch" href="/fe-docs/assets/js/24.14398b8e.js"><link rel="prefetch" href="/fe-docs/assets/js/25.b713f7a4.js"><link rel="prefetch" href="/fe-docs/assets/js/26.db8efaf3.js"><link rel="prefetch" href="/fe-docs/assets/js/27.d34e7c30.js"><link rel="prefetch" href="/fe-docs/assets/js/28.ab30423d.js"><link rel="prefetch" href="/fe-docs/assets/js/29.5db1e07f.js"><link rel="prefetch" href="/fe-docs/assets/js/30.bf0b3b7a.js"><link rel="prefetch" href="/fe-docs/assets/js/31.51acecab.js"><link rel="prefetch" href="/fe-docs/assets/js/32.d33a644e.js"><link rel="prefetch" href="/fe-docs/assets/js/33.27a9fa57.js"><link rel="prefetch" href="/fe-docs/assets/js/34.827d1e3b.js"><link rel="prefetch" href="/fe-docs/assets/js/35.c8acbd72.js"><link rel="prefetch" href="/fe-docs/assets/js/36.193e7742.js"><link rel="prefetch" href="/fe-docs/assets/js/37.bfc800b7.js"><link rel="prefetch" href="/fe-docs/assets/js/38.ce4436b8.js"><link rel="prefetch" href="/fe-docs/assets/js/39.350a399f.js"><link rel="prefetch" href="/fe-docs/assets/js/40.b1119f2e.js"><link rel="prefetch" href="/fe-docs/assets/js/41.3b1c1cb8.js"><link rel="prefetch" href="/fe-docs/assets/js/42.8ce42e9d.js"><link rel="prefetch" href="/fe-docs/assets/js/43.e0bc4dfd.js"><link rel="prefetch" href="/fe-docs/assets/js/44.d623d376.js"><link rel="prefetch" href="/fe-docs/assets/js/45.9ef54400.js"><link rel="prefetch" href="/fe-docs/assets/js/46.6f38b249.js"><link rel="prefetch" href="/fe-docs/assets/js/47.94e4ce68.js"><link rel="prefetch" href="/fe-docs/assets/js/48.2b9cc57b.js"><link rel="prefetch" href="/fe-docs/assets/js/49.29630cb3.js"><link rel="prefetch" href="/fe-docs/assets/js/50.2ed954eb.js"><link rel="prefetch" href="/fe-docs/assets/js/51.6001a393.js"><link rel="prefetch" href="/fe-docs/assets/js/53.3b67d542.js"><link rel="prefetch" href="/fe-docs/assets/js/54.4cc58926.js"><link rel="prefetch" href="/fe-docs/assets/js/55.44d6bd09.js"><link rel="prefetch" href="/fe-docs/assets/js/56.bfd65c1a.js"><link rel="prefetch" href="/fe-docs/assets/js/57.420b9a73.js"><link rel="prefetch" href="/fe-docs/assets/js/58.ad08796f.js"><link rel="prefetch" href="/fe-docs/assets/js/59.85e77a12.js"><link rel="prefetch" href="/fe-docs/assets/js/6.20015d34.js"><link rel="prefetch" href="/fe-docs/assets/js/60.28dc32fc.js"><link rel="prefetch" href="/fe-docs/assets/js/7.808e605c.js"><link rel="prefetch" href="/fe-docs/assets/js/8.71f4cf2f.js"><link rel="prefetch" href="/fe-docs/assets/js/9.c0c57c54.js"><link rel="prefetch" href="/fe-docs/assets/js/examples.c035a85c.js">
+    <link rel="stylesheet" href="/fe-docs/assets/css/0.styles.ed4339ad.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div data-app="true" id="app" class="v-application v-application--is-ltr theme--light" data-v-3e2b3fc7><div class="v-application--wrap"><!----> <main class="v-main" style="padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;" data-v-3e2b3fc7><div class="v-main__wrap"><div class="container f-docs-container pa-0" data-v-3e2b3fc7><!----> <div class="f-docs-content__wrap" data-v-171f31d2 data-v-3e2b3fc7><div class="content__default"><h1 id="migrate-from-foxone-uikit-2-x-to-foxone-uikit-3-x"><a href="#migrate-from-foxone-uikit-2-x-to-foxone-uikit-3-x" class="header-anchor">#</a> Migrate from @foxone/uikit@2.x to @foxone/uikit@3.x</h1> <h2 id="install-uikit"><a href="#install-uikit" class="header-anchor">#</a> Install UIKit</h2> <p>Here is an example for UIKit 2.0</p> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">import</span> Uikit <span class="token keyword">from</span> <span class="token string">&quot;@foxone/uikit&quot;</span><span class="token punctuation">;</span>
+
+Vue<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>Uikit<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>Here is an example from UIKit 3.0</p> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">import</span> UIKit <span class="token keyword">from</span> <span class="token string">&quot;@foxone/uikit&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string">&quot;@foxone/uikit/build/index.min.css&quot;</span><span class="token punctuation">;</span>
+
+<span class="token comment">// UIKit.Toast and UIKit.Dialog depend on vuetify instance</span>
+
+Vue<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>UIKit<span class="token punctuation">)</span><span class="token punctuation">;</span>
+Vue<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>PandoUI<span class="token punctuation">,</span> vuetify<span class="token punctuation">)</span><span class="token punctuation">;</span>
+Vue<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>UIKit<span class="token punctuation">.</span>Toast<span class="token punctuation">,</span> vuetify<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+  top<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+  centered<span class="token operator">:</span> <span class="token boolean">true</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+Vue<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>UIKit<span class="token punctuation">.</span>Dialog<span class="token punctuation">,</span> vuetify<span class="token punctuation">,</span> <span class="token punctuation">{</span> flat<span class="token operator">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h2 id="update-vuetify-options"><a href="#update-vuetify-options" class="header-anchor">#</a> Update Vuetify options</h2> <p>UIKit 3.x add some preset options for vuetify</p> <p>Here is an example for UIKit 2.0</p> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">import</span> zh <span class="token keyword">from</span> <span class="token string">&quot;vuetify/es5/locale/zh-Hans&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> en <span class="token keyword">from</span> <span class="token string">&quot;vuetify/es5/locale/en&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> ja <span class="token keyword">from</span> <span class="token string">&quot;vuetify/es5/locale/ja&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> enUikit <span class="token keyword">from</span> <span class="token string">&quot;@foxone/uikit/src/locales/en&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> jaUikit <span class="token keyword">from</span> <span class="token string">&quot;@foxone/uikit/src/locales/ja&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> zhUikit <span class="token keyword">from</span> <span class="token string">&quot;@foxone/uikit/src/locales/zh-Hans&quot;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">{</span> store <span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> isDark <span class="token operator">=</span> store<span class="token punctuation">.</span>state<span class="token punctuation">.</span>app<span class="token punctuation">.</span>dark<span class="token punctuation">;</span>
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+    icons<span class="token operator">:</span> <span class="token punctuation">{</span>
+      iconfont<span class="token operator">:</span> <span class="token string">&quot;mdiSvg&quot;</span><span class="token punctuation">,</span>
+      values<span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token comment">// ...</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    theme<span class="token operator">:</span> <span class="token punctuation">{</span>
+      dark<span class="token operator">:</span> isDark<span class="token punctuation">,</span>
+      options<span class="token operator">:</span> <span class="token punctuation">{</span>
+        customProperties<span class="token operator">:</span> <span class="token boolean">true</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      themes<span class="token operator">:</span> <span class="token punctuation">{</span>
+        light<span class="token operator">:</span> <span class="token punctuation">{</span>
+          <span class="token comment">// ...</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        dark<span class="token operator">:</span> <span class="token punctuation">{</span>
+          <span class="token comment">// ...</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    lang<span class="token operator">:</span> <span class="token punctuation">{</span>
+      locales<span class="token operator">:</span> <span class="token punctuation">{</span>
+        zh<span class="token operator">:</span> <span class="token punctuation">{</span>
+          <span class="token operator">...</span>zh<span class="token punctuation">,</span>
+          <span class="token operator">...</span>zhUikit
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        en<span class="token operator">:</span> <span class="token punctuation">{</span>
+          <span class="token operator">...</span>en<span class="token punctuation">,</span>
+          <span class="token operator">...</span>enUikit
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        ja<span class="token operator">:</span> <span class="token punctuation">{</span>
+          <span class="token operator">...</span>ja<span class="token punctuation">,</span>
+          <span class="token operator">...</span>jaUikit
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>Here is an example for UIKit 3.0</p> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">import</span> UIKit <span class="token keyword">from</span> <span class="token string">&quot;@foxone/uikit&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> icons <span class="token keyword">from</span> <span class="token string">&quot;@/utils/icons&quot;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token punctuation">{</span> mergeDeep <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;vuetify/lib/util/helpers&quot;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">{</span> store <span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> isDark <span class="token operator">=</span> store<span class="token punctuation">.</span>state<span class="token punctuation">.</span>app<span class="token punctuation">.</span>dark<span class="token punctuation">;</span>
+
+  <span class="token keyword">const</span> options <span class="token operator">=</span> <span class="token punctuation">{</span>
+    icons<span class="token operator">:</span> <span class="token punctuation">{</span>
+      values<span class="token operator">:</span> icons
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    theme<span class="token operator">:</span> <span class="token punctuation">{</span>
+      dark<span class="token operator">:</span> isDark<span class="token punctuation">,</span>
+      themes<span class="token operator">:</span> <span class="token punctuation">{</span>
+        light<span class="token operator">:</span> <span class="token punctuation">{</span>
+          primary<span class="token operator">:</span> <span class="token string">&quot;#000000&quot;</span><span class="token punctuation">,</span>
+          secondary<span class="token operator">:</span> <span class="token string">&quot;#FEF6E8&quot;</span><span class="token punctuation">,</span>
+          third<span class="token operator">:</span> <span class="token string">&quot;#FBEACC&quot;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        dark<span class="token operator">:</span> <span class="token punctuation">{</span>
+          primary<span class="token operator">:</span> <span class="token string">&quot;#FFFFFF&quot;</span><span class="token punctuation">,</span>
+          secondary<span class="token operator">:</span> <span class="token string">&quot;#452C00&quot;</span><span class="token punctuation">,</span>
+          third<span class="token operator">:</span> <span class="token string">&quot;#5C3A13&quot;</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">return</span> <span class="token function">mergeDeep</span><span class="token punctuation">(</span>UIKit<span class="token punctuation">.</span>preset<span class="token punctuation">,</span> options<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="update-sass-variables"><a href="#update-sass-variables" class="header-anchor">#</a> Update sass variables</h2> <p>Add variables for apply customize styles in your sass variable file.</p> <div class="language-scss extra-class"><pre class="language-scss"><code><span class="token comment">// src/style/variables.scss</span>
+
+<span class="token keyword">@import</span> <span class="token string">&quot;~@foxone/uikit/src/styles/variables/_index.scss&quot;</span><span class="token punctuation">;</span>
+</code></pre></div><h2 id="add-font-link"><a href="#add-font-link" class="header-anchor">#</a> Add font link</h2> <p>If font of your website in Inter, we have a static link.</p> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token comment">// nuxt.config.ts</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> NuxtConfig <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;@nuxt/types&quot;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> config<span class="token operator">:</span> NuxtConfig <span class="token operator">=</span> <span class="token punctuation">{</span>
+  head<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token comment">// ...</span>
+    link<span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span> rel<span class="token operator">:</span> <span class="token string">&quot;stylesheet&quot;</span><span class="token punctuation">,</span> href<span class="token operator">:</span> <span class="token string">&quot;https://static.fox.one/font/inter/style.css&quot;</span> <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment">// ...</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> config<span class="token punctuation">;</span>
+</code></pre></div><h2 id="components-migration"><a href="#components-migration" class="header-anchor">#</a> Components migration</h2> <h3 id="fappbottomnav"><a href="#fappbottomnav" class="header-anchor">#</a> FAppBottomNav</h3> <p>1.Props updated
+2.@change params updated</p> <h3 id="fbottomsheet"><a href="#fbottomsheet" class="header-anchor">#</a> FBottomSheet</h3> <p>1.Add title prop replace title slot
+2.Use FBottomSheetSubtitle subtitle slot</p></div> <!----> <hr role="separator" aria-orientation="horizontal" class="v-divider theme--light f-divider" style="border-width:0.5px 0 0 0;opacity:0.1;" data-v-171f31d2> <div class="page-edit" data-v-cd04f69a data-v-171f31d2><!----> <div class="spacer" data-v-cd04f69a data-v-cd04f69a></div> <div class="updated-link" data-v-cd04f69a><span class="updated-link__label" data-v-cd04f69a>Last Updated:</span> <span data-v-cd04f69a>3/18/2022, 7:14:58 AM</span></div></div></div></div></div></main> <footer class="v-footer pa-4 app-footer v-sheet theme--light v-footer--absolute greyscale_6" style="left:0px;right:0px;bottom:0px;" data-v-1d77c6ef data-v-3e2b3fc7><div class="flex" data-v-1d77c6ef><div class="app-footer-links" data-v-1d77c6ef><div class="app-footer-links__group" data-v-1d77c6ef><div class="app-footer-links__title" data-v-1d77c6ef>Community</div> <div class="app-footer-links__item" data-v-1d77c6ef><a href="https://discord.com/invite/ek45g3Cymd" target="_blank" rel="noopener noreferrer" class="text--primary" data-v-1d77c6ef>
+            Discord
+          </a> <span data-v-1d77c6ef><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div><div class="app-footer-links__item" data-v-1d77c6ef><a href="https://twitter.com/pando_im" target="_blank" rel="noopener noreferrer" class="text--primary" data-v-1d77c6ef>
+            Twitter
+          </a> <span data-v-1d77c6ef><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div><div class="app-footer-links__item" data-v-1d77c6ef><a href="https://github.com/fox-one" target="_blank" rel="noopener noreferrer" class="text--primary" data-v-1d77c6ef>
+            Github
+          </a> <span data-v-1d77c6ef><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div></div> <div class="app-footer-links__group" data-v-1d77c6ef><div class="app-footer-links__title" data-v-1d77c6ef>Products</div> <div class="app-footer-links__item" data-v-1d77c6ef><a href="https://pando.im/leaf" target="_blank" rel="noopener noreferrer" class="text--primary" data-v-1d77c6ef>
+            Pando Leaf
+          </a> <span data-v-1d77c6ef><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div><div class="app-footer-links__item" data-v-1d77c6ef><a href="https://pando.im/rings" target="_blank" rel="noopener noreferrer" class="text--primary" data-v-1d77c6ef>
+            Pando Rings
+          </a> <span data-v-1d77c6ef><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div><div class="app-footer-links__item" data-v-1d77c6ef><a href="https://pando.im/lake" target="_blank" rel="noopener noreferrer" class="text--primary" data-v-1d77c6ef>
+            Pando Lake
+          </a> <span data-v-1d77c6ef><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div></div></div> <div class="row no-gutters justify-center" data-v-1d77c6ef><div class="py-6 text-center caption col col-12" data-v-1d77c6ef>
+        Copyright © 2020 - 2022
+        <strong data-v-1d77c6ef>@Fox.ONE</strong></div></div></div></footer></div></div><div class="global-ui"></div></div>
+    <script src="/fe-docs/assets/js/app.de792d44.js" defer></script><script src="/fe-docs/assets/js/5.4a9d9ddc.js" defer></script><script src="/fe-docs/assets/js/52.044ec9cc.js" defer></script>
+  </body>
+</html>
