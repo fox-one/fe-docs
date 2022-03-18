@@ -1,5 +1,5 @@
 <template>
-  <f-search-input clearable placeholder="Search Assets" />
+  <f-search-input clearable placeholder="Search Assets" label="label1231" />
 </template>
 
 <script lang="ts">

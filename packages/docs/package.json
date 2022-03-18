@@ -9,9 +9,9 @@
   "author": "Fox.ONE",
   "license": "ISC",
   "dependencies": {
-    "@foxone/icons": "^3.0.1-0",
+    "@foxone/icons": "beta",
     "@foxone/pando-ui": "beta",
-    "@foxone/uikit": "3.1.2-2",
+    "@foxone/uikit": "beta",
     "@foxone/utils": "^0.2.21",
     "@foxone/vuepress-theme-docs": "beta",
     "vuetify": "^2.6.2"
