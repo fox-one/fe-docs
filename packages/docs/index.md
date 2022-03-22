@@ -8,6 +8,9 @@ To use UIKit, you first need to install some dependencies. And make sure you hav
 
 ```bash
 yarn add @foxone/uikit@beta @foxone/icons@beta @foxone/utils
+
+// beta version
+yarn add @foxone/uikit@beta @foxone/icons@beta @foxone/utils
 ```
 
 After installed, add UIKit to plugins, and update options of vuetify to apply presets.
@@ -37,7 +40,7 @@ const customOptions = {
 };
 
 // merge with UIKit preset
-const vuetifyOptions = mergeDeep(UIKit.preset, options);
+const vuetifyOptions = mergeDeep(UIKit.preset, customOptions);
 
 Vue.use(UIKit);
 Vue.use(UIKit.Toast, app.vuetify, {
