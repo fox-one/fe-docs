@@ -1,5 +1,5 @@
 <template>
-  <f-app-bar dark back title="Test" color="green" @back="handleBack" />
+  <f-app-bar dark back title="Test" color="green" />
 </template>
 <script>
 export default {
