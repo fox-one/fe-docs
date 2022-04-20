@@ -2,6 +2,10 @@
 
 UIKit is a UI library based on Vue and Vuetify，which provides some customized styles.
 
+## Version
+
+<version />
+
 ## Installation
 
 To use UIKit, you first need to install some dependencies. And make sure you have Vuetify installed properly.

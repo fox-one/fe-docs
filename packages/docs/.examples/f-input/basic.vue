@@ -1,15 +1,42 @@
 <template>
-  <div>
-    <f-input v-model="value" label="Type something here" class="mb-10" />
+  <v-container>
+    <f-input
+      v-model="value"
+      label="Type something here"
+      class="mb-10"
+      prepend-icon="$close"
+      prepend-inner-icon="$close"
+      append-icon="$close"
+      append-outer-icon="$close"
+    />
 
     <f-input
       v-model="value"
+      dense
+      :clearable="true"
+      hint="click the clear button to clear content"
+      label="Type something here"
+      class="mb-10"
+      persistent-hint
+      prepend-icon="$close"
+      prepend-inner-icon="$close"
+      append-icon="$close"
+      append-outer-icon="$close"
+    />
+
+    <f-input
+      v-model="value"
+      dense
       :clearable="true"
       hint="click the clear button to clear content"
       label="Type something here"
       class="mb-10"
       persistent-hint
     />
+
+    <f-search-input />
+
+    <f-search-input dense />
 
     <f-input
       v-model="username"
@@ -19,7 +46,7 @@
       class="mb-10"
       persistent-hint
     />
-  </div>
+  </v-container>
 </template>
 
 <script lang="ts">

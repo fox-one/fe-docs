@@ -3,6 +3,9 @@
     <v-col>
       <f-button class="mx-2" large color="primary">normal</f-button>
       <f-button class="mx-2" large disabled color="primary">disabled</f-button>
+      <f-button class="mx-2" large disabled text color="primary">
+        disabled
+      </f-button>
       <f-button class="mx-2" large loading color="primary">loading</f-button>
       <f-button class="mx-2" large text color="primary">normal</f-button>
     </v-col>
