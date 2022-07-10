@@ -13,7 +13,7 @@
     "@foxone/pando-ui": "beta",
     "@foxone/uikit": "beta",
     "@foxone/utils": "^0.2.21",
-    "@foxone/vuepress-theme-docs": "beta",
+    "@foxone/vuepress-theme-docs": "^0.0.2-1",
     "axios": "^0.26.1",
     "vuetify": "^2.6.2"
   },

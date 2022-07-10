@@ -3322,8 +3322,8 @@ __metadata:
   linkType: hard
 
 "@foxone/uikit@npm:beta":
-  version: 3.1.9-1
-  resolution: "@foxone/uikit@npm:3.1.9-1"
+  version: 3.1.9-2
+  resolution: "@foxone/uikit@npm:3.1.9-2"
   dependencies:
     "@foxone/fennec-dapp": ^0.5.4
     "@foxone/mixin-api": ^0.1.6
@@ -3344,7 +3344,7 @@ __metadata:
     "@foxone/utils": ^0.2.6
     vue: ^2.6.12
     vuetify: ^2.4.5
-  checksum: b4393150f1070ffe0817ada8026773d4fa8d873b897e160aef20f62dbf2b6c700879661723c9b470cc1148f7a925c34c3589c52bc8762acae16d34cce79feaf5
+  checksum: 713dfcd5d0a76800136b83b8b97a49e8d3eca03925ffe7da03bb064e61cd363741cd5089a453c3af76b565dfa0b6d2ded514866d49be4ef0f7f71c5b99b5ac6b
   languageName: node
   linkType: hard
 
@@ -3365,9 +3365,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@foxone/vuepress-theme-docs@npm:beta":
-  version: 0.0.2-7
-  resolution: "@foxone/vuepress-theme-docs@npm:0.0.2-7"
+"@foxone/vuepress-theme-docs@npm:^0.0.2-1":
+  version: 0.0.2-9
+  resolution: "@foxone/vuepress-theme-docs@npm:0.0.2-9"
   dependencies:
     entities: 1.1.2
     markdown-it-checkbox: ^1.1.0
@@ -3389,7 +3389,7 @@ __metadata:
   peerDependencies:
     "@foxone/icons": ^3.0.0
     "@foxone/uikit": ^3.0.0
-  checksum: 9838e637badcc78eb2d7c3f1308a458255a7d45a3fc370d967061844131bd01d6b9680510381f5d6bb790c8199ff41c292a153a6c6998aa603bd49a09e3f0a78
+  checksum: e8a794db3df0999dcaf13befe3cbe16fb0170eaa3d1bd231923e62924f8ab8cccdcdb432bb73c535a138e3544a7a3738c5cbc222f819a546ccee943fd129f881
   languageName: node
   linkType: hard
 
@@ -8470,7 +8470,7 @@ __metadata:
     "@foxone/pando-ui": beta
     "@foxone/uikit": beta
     "@foxone/utils": ^0.2.21
-    "@foxone/vuepress-theme-docs": beta
+    "@foxone/vuepress-theme-docs": ^0.0.2-1
     axios: ^0.26.1
     entities: 1.1.2
     sass-loader: 10.1.0

@@ -1,6 +1,5 @@
 import Vuex from "vuex";
 import Vuetify from "vuetify/lib";
-import UIKit from "@foxone/uikit";
 import PandoUI, { messages } from "@foxone/pando-ui";
 import * as icons from "@foxone/icons";
 import { mergeDeep } from "vuetify/lib/util/helpers";
@@ -20,7 +19,7 @@ export default ({
   isServer
 }) => {
   const vuetifyOptions = siteData.themeConfig.vuetifyOptions || {};
-  const preset = mergeDeep(UIKit.preset, {
+  let customConfig = {
     icons: {
       values: {
         ...Object.keys(icons).reduce((m, k) => {
@@ -30,7 +29,7 @@ export default ({
         }, {})
       }
     },
-    lang: { locales: mergeDeep(locales, messages) },
+    lang: { locales },
     theme: {
       themes: {
         light: {
@@ -45,16 +44,18 @@ export default ({
         }
       }
     }
-  });
+  };
 
   if (!isServer) {
-    Vue.use(Vuetify);
+    const UIKit = require("@foxone/uikit");
+
+    customConfig = mergeDeep(UIKit.preset, customConfig);
+
+    const vuetify = new Vuetify(mergeDeep(customConfig, vuetifyOptions));
+
+    options.vuetify = vuetify;
+
     Vue.use(UIKit);
-
-    const vuetify = new Vuetify(mergeDeep(preset, vuetifyOptions));
-
-    options = Object.assign(options, { vuetify });
-
     Vue.use(UIKit.Toast, () => options.vuetify, { top: false, centered: true });
     Vue.use(UIKit.Dialog, () => options.vuetify, { flat: true });
     Vue.use(UIKit.Passport, {
@@ -67,9 +68,14 @@ export default ({
         pkce: true
       }
     });
-    Vue.use(PandoUI, () => options.vuetify);
+    Vue.use(PandoUI, vuetify);
+  } else {
+    const vuetify = new Vuetify(mergeDeep(customConfig, vuetifyOptions));
+
+    options.vuetify = vuetify;
   }
 
+  Vue.use(Vuetify);
   Vue.use(Vuex);
   Vue.mixin({ store });
 

@@ -70,12 +70,6 @@ import { Component, Vue } from "vue-property-decorator";
 import { v4 as uuid } from "uuid";
 import axios from "axios";
 
-declare module "vue/types/vue" {
-  interface Vue {
-    $uikit: any;
-  }
-}
-
 @Component
 class Passport extends Vue {
   loading = false;
@@ -144,7 +138,8 @@ class Passport extends Vue {
         this.getMe();
       });
     } catch (error: any) {
-      this.$uikit.toast.error(error);
+      console.log(error);
+      this.$uikit.toast.error({ message: error.message });
     }
 
     this.loading = false;
