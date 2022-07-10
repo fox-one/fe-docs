@@ -21,6 +21,12 @@ module.exports = [
     children: readdir("../styles", "styles/")
   },
   {
+    title: "Services",
+    collapsable: true,
+    sidebarDepth: 0,
+    children: readdir("../services", "services/")
+  },
+  {
     title: "Components",
     collapsable: true,
     sidebarDepth: 0,

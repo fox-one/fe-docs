@@ -16,7 +16,8 @@ export default ({
   Vue,
   options, // options for root Vue instance: new Vue(options)
   // router,
-  siteData
+  siteData,
+  isServer
 }) => {
   const vuetifyOptions = siteData.themeConfig.vuetifyOptions || {};
   const preset = mergeDeep(UIKit.preset, {
@@ -46,17 +47,27 @@ export default ({
     }
   });
 
-  const vuetify = new Vuetify(mergeDeep(preset, vuetifyOptions));
-
-  options.vuetify = vuetify;
-
-  Vue.use(Vuetify);
-
-  if (typeof window !== undefined) {
+  if (!isServer) {
+    Vue.use(Vuetify);
     Vue.use(UIKit);
-    Vue.use(UIKit.Toast, vuetify, { top: false, centered: true });
-    Vue.use(UIKit.Dialog, vuetify, { flat: true });
-    Vue.use(PandoUI, vuetify);
+
+    const vuetify = new Vuetify(mergeDeep(preset, vuetifyOptions));
+
+    options = Object.assign(options, { vuetify });
+
+    Vue.use(UIKit.Toast, () => options.vuetify, { top: false, centered: true });
+    Vue.use(UIKit.Dialog, () => options.vuetify, { flat: true });
+    Vue.use(UIKit.Passport, {
+      vuetify: () => options.vuetify,
+      options: { origin: "Text UKIT" },
+      authModalProps: {
+        wallets: ["fennec", "mixin", "mvm"],
+        clientId: "0900a886-acde-4f7d-a77c-17d47c95fa7f",
+        scope: "PROFILE:READ ASSETS:READ",
+        pkce: true
+      }
+    });
+    Vue.use(PandoUI, () => options.vuetify);
   }
 
   Vue.use(Vuex);
