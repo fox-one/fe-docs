@@ -15,7 +15,7 @@
     "@foxone/utils": "^0.2.21",
     "@foxone/vuepress-theme-docs": "^0.0.2-1",
     "axios": "^0.26.1",
-    "vuetify": "^2.6.2"
+    "vuetify": "^2.6.10"
   },
   "devDependencies": {
     "entities": "1.1.2",
